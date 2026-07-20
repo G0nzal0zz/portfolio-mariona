@@ -2,7 +2,6 @@
 
 import Link from 'next/link';
 import Image from 'next/image';
-import { assetPath } from '@/lib/asset-path';
 import { useLanguage } from '@/lib/language-context';
 import { muContent } from '@/data/mu-content';
 
@@ -51,7 +50,7 @@ export function MuProjectContent() {
         {/* 1. Vídeo animación logo */}
         <div className="relative w-full overflow-hidden" style={{ aspectRatio: 1400 / 902 }}>
           <video
-            src={assetPath('/images/projects/mu/animacion-logo.mp4')}
+            src={'images/projects/mu/animacion-logo.mp4'}
             autoPlay
             loop
             muted
@@ -64,7 +63,7 @@ export function MuProjectContent() {
         <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 md:gap-8">
           <div className="relative w-full overflow-hidden" style={{ aspectRatio: 1643 / 2200 }}>
             <Image
-              src="/images/projects/mu/cover.jpg"
+              src="images/projects/mu/cover.jpg"
               alt="Vaca con etiqueta de la marca Mú"
               fill
               loading="lazy"
@@ -74,7 +73,7 @@ export function MuProjectContent() {
           </div>
           <div className="relative w-full overflow-hidden" style={{ aspectRatio: 1643 / 2200 }}>
             <Image
-              src="/images/projects/mu/mockup-botella-prado.jpg"
+              src="images/projects/mu/mockup-botella-prado.jpg"
               alt="Mockup de la botella Mú en un prado"
               fill
               loading="lazy"
@@ -87,7 +86,7 @@ export function MuProjectContent() {
         {/* 3. Vacas con leche */}
         <div className="relative w-full overflow-hidden" style={{ aspectRatio: 2200 / 1228 }}>
           <Image
-            src="/images/projects/mu/vacas-con-leche.jpg"
+            src="images/projects/mu/vacas-con-leche.jpg"
             alt="Vacas junto a botellas de leche Mú"
             fill
             loading="lazy"
@@ -100,7 +99,7 @@ export function MuProjectContent() {
         <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 md:gap-8">
           <div className="relative w-full overflow-hidden" style={{ aspectRatio: 1465 / 2200 }}>
             <Image
-              src="/images/projects/mu/estanterias-botellas.jpg"
+              src="images/projects/mu/estanterias-botellas.jpg"
               alt="Botellas de Mú en estanterías"
               fill
               loading="lazy"
@@ -110,7 +109,7 @@ export function MuProjectContent() {
           </div>
           <div className="relative w-full overflow-hidden" style={{ aspectRatio: 1465 / 2200 }}>
             <Image
-              src="/images/projects/mu/pack-botellas.jpg"
+              src="images/projects/mu/pack-botellas.jpg"
               alt="Pack de botellas Mú"
               fill
               loading="lazy"
@@ -123,7 +122,7 @@ export function MuProjectContent() {
         {/* 5. Frame 68 */}
         <div className="relative w-full overflow-hidden" style={{ aspectRatio: 2200 / 1235 }}>
           <Image
-            src="/images/projects/mu/frame-68.jpg"
+            src="images/projects/mu/frame-68.jpg"
             alt="Detalle del proyecto Mú"
             fill
             loading="lazy"
@@ -136,7 +135,7 @@ export function MuProjectContent() {
         <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 md:gap-8">
           <div className="relative w-full overflow-hidden" style={{ aspectRatio: 1476 / 2200 }}>
             <Image
-              src="/images/projects/mu/gemini-generate.jpg"
+              src="images/projects/mu/gemini-generate.jpg"
               alt="Composición generativa del proyecto Mú"
               fill
               loading="lazy"
@@ -146,7 +145,7 @@ export function MuProjectContent() {
           </div>
           <div className="relative w-full overflow-hidden" style={{ aspectRatio: 1476 / 2200 }}>
             <Image
-              src="/images/projects/mu/logo-en-vaca.jpg"
+              src="images/projects/mu/logo-en-vaca.jpg"
               alt="Logotipo Mú aplicado sobre una vaca"
               fill
               loading="lazy"
@@ -159,7 +158,7 @@ export function MuProjectContent() {
         {/* 7. Botella en prado */}
         <div className="relative w-full overflow-hidden" style={{ aspectRatio: 2200 / 1227 }}>
           <Image
-            src="/images/projects/mu/botella-en-prado.jpg"
+            src="images/projects/mu/botella-en-prado.jpg"
             alt="Botella Mú en un prado"
             fill
             loading="lazy"

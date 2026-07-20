@@ -43,7 +43,7 @@ export function ContactContent() {
       {/* Foto, tratamiento monocromo azul (ya viene aplicado en el archivo) — recorte centrado en la cara */}
       <div className="relative mt-12 aspect-[10/9] w-[280px] overflow-hidden md:w-[340px]">
         <Image
-          src="/images/contact/mariona.jpg"
+          src="images/contact/mariona.jpg"
           alt="Mariona Larroya"
           fill
           sizes="340px"

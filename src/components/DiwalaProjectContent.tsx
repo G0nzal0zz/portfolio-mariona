@@ -2,7 +2,6 @@
 
 import Link from 'next/link';
 import Image from 'next/image';
-import { assetPath } from '@/lib/asset-path';
 import { useLanguage } from '@/lib/language-context';
 import { diwalaContent } from '@/data/diwala-content';
 
@@ -49,7 +48,7 @@ export function DiwalaProjectContent() {
         {/* 1. Vídeo logo Diwala */}
         <div className="relative w-full overflow-hidden" style={{ aspectRatio: 1400 / 788 }}>
           <video
-            src={assetPath('/images/projects/diwala/diwala-logo.mp4')}
+            src={'images/projects/diwala/diwala-logo.mp4'}
             autoPlay
             loop
             muted
@@ -62,7 +61,7 @@ export function DiwalaProjectContent() {
         <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 md:gap-8">
           <div className="relative w-full overflow-hidden" style={{ aspectRatio: 1476 / 2200 }}>
             <Image
-              src="/images/projects/diwala/mockup-diwala-vela.jpg"
+              src="images/projects/diwala/mockup-diwala-vela.jpg"
               alt="Mockup de la vela Diwala"
               fill
               loading="lazy"
@@ -72,7 +71,7 @@ export function DiwalaProjectContent() {
           </div>
           <div className="relative w-full overflow-hidden" style={{ aspectRatio: 1476 / 2200 }}>
             <Image
-              src="/images/projects/diwala/cover.jpg"
+              src="images/projects/diwala/cover.jpg"
               alt="Mockup cálido del packaging de Diwala"
               fill
               loading="lazy"
@@ -85,7 +84,7 @@ export function DiwalaProjectContent() {
         {/* 3. Diwala libro */}
         <div className="relative w-full overflow-hidden" style={{ aspectRatio: 2200 / 1227 }}>
           <Image
-            src="/images/projects/diwala/libro.jpg"
+            src="images/projects/diwala/libro.jpg"
             alt="Libro de marca de Diwala"
             fill
             loading="lazy"
@@ -98,7 +97,7 @@ export function DiwalaProjectContent() {
         <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 md:gap-8">
           <div className="relative w-full overflow-hidden" style={{ aspectRatio: 800 / 1140 }}>
             <Image
-              src="/images/projects/diwala/velas.jpg"
+              src="images/projects/diwala/velas.jpg"
               alt="Velas aromáticas Diwala"
               fill
               loading="lazy"
@@ -108,7 +107,7 @@ export function DiwalaProjectContent() {
           </div>
           <div className="relative w-full overflow-hidden" style={{ aspectRatio: 800 / 1140 }}>
             <video
-              src={assetPath('/images/projects/diwala/diwala-telas.mp4')}
+              src={'images/projects/diwala/diwala-telas.mp4'}
               autoPlay
               loop
               muted
@@ -121,7 +120,7 @@ export function DiwalaProjectContent() {
         {/* 5. Vídeo Mariona Larroya */}
         <div className="relative w-full overflow-hidden" style={{ aspectRatio: 1400 / 780 }}>
           <video
-            src={assetPath('/images/projects/diwala/mariona-larroya.mp4')}
+            src={'images/projects/diwala/mariona-larroya.mp4'}
             autoPlay
             loop
             muted
@@ -134,7 +133,7 @@ export function DiwalaProjectContent() {
         <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 md:gap-8">
           <div className="relative w-full overflow-hidden" style={{ aspectRatio: 1080 / 1350 }}>
             <Image
-              src="/images/projects/diwala/photo-8a17b.jpg"
+              src="images/projects/diwala/photo-8a17b.jpg"
               alt="Detalle del proyecto Diwala"
               fill
               loading="lazy"
@@ -144,7 +143,7 @@ export function DiwalaProjectContent() {
           </div>
           <div className="relative w-full overflow-hidden" style={{ aspectRatio: 1080 / 1350 }}>
             <Image
-              src="/images/projects/diwala/frame-29.jpg"
+              src="images/projects/diwala/frame-29.jpg"
               alt="Detalle del proyecto Diwala"
               fill
               loading="lazy"

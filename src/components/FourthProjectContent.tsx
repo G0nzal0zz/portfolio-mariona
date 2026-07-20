@@ -2,7 +2,6 @@
 
 import Link from 'next/link';
 import Image from 'next/image';
-import { assetPath } from '@/lib/asset-path';
 import { useLanguage } from '@/lib/language-context';
 import { fourthContent } from '@/data/fourth-content';
 
@@ -51,7 +50,7 @@ export function FourthProjectContent() {
         {/* 1. Vídeo hero rosa, en loop */}
         <div className="relative w-full overflow-hidden" style={{ aspectRatio: 1400 / 788 }}>
           <video
-            src={assetPath('/images/projects/fourth/hero-rosa.mp4')}
+            src={'images/projects/fourth/hero-rosa.mp4'}
             autoPlay
             loop
             muted
@@ -64,7 +63,7 @@ export function FourthProjectContent() {
         <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 md:gap-8">
           <div className="relative w-full overflow-hidden" style={{ aspectRatio: 1250 / 1349 }}>
             <Image
-              src="/images/projects/fourth/bolso-bote.jpg"
+              src="images/projects/fourth/bolso-bote.jpg"
               alt="Bote de Fourth guardado en un bolso rosa"
               fill
               loading="lazy"
@@ -74,7 +73,7 @@ export function FourthProjectContent() {
           </div>
           <div className="relative w-full overflow-hidden" style={{ aspectRatio: 1250 / 1349 }}>
             <Image
-              src="/images/projects/fourth/diastasis-03.jpg"
+              src="images/projects/fourth/diastasis-03.jpg"
               alt="Explicación de la diástasis abdominal y el símbolo de Fourth"
               fill
               loading="lazy"
@@ -87,7 +86,7 @@ export function FourthProjectContent() {
         {/* 3. Textura de polvo con el logo grabado */}
         <div className="relative w-full overflow-hidden" style={{ aspectRatio: 2200 / 1228 }}>
           <Image
-            src="/images/projects/fourth/powder-texture.jpg"
+            src="images/projects/fourth/powder-texture.jpg"
             alt="Textura de proteína en polvo con el logotipo Fourth grabado"
             fill
             loading="lazy"
@@ -100,7 +99,7 @@ export function FourthProjectContent() {
         <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 md:gap-8">
           <div className="relative w-full overflow-hidden" style={{ aspectRatio: 1000 / 1236 }}>
             <video
-              src={assetPath('/images/projects/fourth/diastasis-2.mp4')}
+              src={'images/projects/fourth/diastasis-2.mp4'}
               autoPlay
               loop
               muted
@@ -110,7 +109,7 @@ export function FourthProjectContent() {
           </div>
           <div className="relative w-full overflow-hidden" style={{ aspectRatio: 1000 / 1236 }}>
             <Image
-              src="/images/projects/fourth/todo-cajas.jpg"
+              src="images/projects/fourth/todo-cajas.jpg"
               alt="Cajas de packaging de Fourth apiladas"
               fill
               loading="lazy"
@@ -123,7 +122,7 @@ export function FourthProjectContent() {
         {/* 5. Packaging desplegable */}
         <div className="relative w-full overflow-hidden" style={{ aspectRatio: 2200 / 1228 }}>
           <Image
-            src="/images/projects/fourth/packaging-desplegable.jpg"
+            src="images/projects/fourth/packaging-desplegable.jpg"
             alt="Troquel desplegado del packaging de Fourth"
             fill
             loading="lazy"
@@ -136,7 +135,7 @@ export function FourthProjectContent() {
         <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 md:gap-8">
           <div className="relative w-full overflow-hidden" style={{ aspectRatio: 671 / 1000 }}>
             <Image
-              src="/images/projects/fourth/mockup-bote.jpg"
+              src="images/projects/fourth/mockup-bote.jpg"
               alt="Mockup del bote de Fourth"
               fill
               loading="lazy"
@@ -146,7 +145,7 @@ export function FourthProjectContent() {
           </div>
           <div className="relative w-full overflow-hidden" style={{ aspectRatio: 671 / 1000 }}>
             <Image
-              src="/images/projects/fourth/mockup-cara.jpg"
+              src="images/projects/fourth/mockup-cara.jpg"
               alt="Mockup del packaging de Fourth sobre el cuerpo"
               fill
               loading="lazy"
@@ -160,7 +159,7 @@ export function FourthProjectContent() {
         <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 md:gap-8">
           <div className="relative w-full overflow-hidden" style={{ aspectRatio: 671 / 1000 }}>
             <Image
-              src="/images/projects/fourth/poniendo-proteina.jpg"
+              src="images/projects/fourth/poniendo-proteina.jpg"
               alt="Preparando la proteína Fourth en un vaso"
               fill
               loading="lazy"
@@ -170,7 +169,7 @@ export function FourthProjectContent() {
           </div>
           <div className="relative w-full overflow-hidden" style={{ aspectRatio: 671 / 1000 }}>
             <video
-              src={assetPath('/images/projects/fourth/cuerpos.mp4')}
+              src={'images/projects/fourth/cuerpos.mp4'}
               autoPlay
               loop
               muted
