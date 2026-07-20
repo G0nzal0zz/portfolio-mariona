@@ -2,6 +2,7 @@
 
 import { useLanguage } from '@/lib/language-context';
 import { contactContent } from '@/data/contact-content';
+import { asset } from '@/lib/asset-path';
 
 export function ContactContent() {
   const { locale } = useLanguage();
@@ -43,7 +44,7 @@ export function ContactContent() {
       <div className="relative mt-12 aspect-[10/9] w-[280px] overflow-hidden md:w-[340px]">
         {/* eslint-disable-next-line @next/next/no-img-element */}
         <img
-          src="images/contact/mariona.jpg"
+          src={asset('images/contact/mariona.jpg')}
           alt="Mariona Larroya"
           sizes="340px"
           style={{ objectPosition: '75% 20%' }}

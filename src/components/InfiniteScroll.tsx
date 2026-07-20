@@ -3,6 +3,7 @@
 import { useEffect, useState } from 'react';
 import { scrollImages } from '@/data/scroll-images';
 import { LogoMark } from './LogoMark';
+import { asset } from '@/lib/asset-path';
 
 // Baraja Fisher-Yates
 function shuffle<T>(arr: T[]): T[] {
@@ -30,7 +31,7 @@ export function InfiniteScroll() {
       <div className="scroll-track flex h-full w-max items-center">
         {track.map((src, i) => (
           <div key={i} className="relative h-full aspect-square shrink-0 overflow-hidden">
-            <img src={src} alt="" sizes="75vh" className="absolute inset-0 h-full w-full object-cover grayscale" />
+            <img src={asset(src)} alt="" sizes="75vh" className="absolute inset-0 h-full w-full object-cover grayscale" />
           </div>
         ))}
       </div>

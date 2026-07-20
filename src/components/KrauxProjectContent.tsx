@@ -3,6 +3,7 @@
 import Link from 'next/link';
 import { useLanguage } from '@/lib/language-context';
 import { krauxContent } from '@/data/kraux-content';
+import { asset } from '@/lib/asset-path';
 
 // Orden y proporciones tal como los indicaste:
 // 1. hero.gif (animado, a todo ancho)
@@ -62,14 +63,14 @@ export function KrauxProjectContent() {
       {/* Columna derecha: secuencia de imágenes */}
       <div className="flex flex-1 flex-col gap-6 pb-24 md:gap-8">
         {/* 1. Hero animado */}
-        <GifBlock src="images/projects/kraux-font/hero.gif" alt="Título Kraux Font animado sobre ambiente de club" ratio={632 / 356} />
+        <GifBlock src={asset('images/projects/kraux-font/hero.gif')} alt="Título Kraux Font animado sobre ambiente de club" ratio={632 / 356} />
 
         {/* 2. animación de letras + sold out — misma altura, recortadas */}
         <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 md:gap-8">
           <div className="relative w-full overflow-hidden" style={{ aspectRatio: 1076 / 1286 }}>
             {/* eslint-disable-next-line @next/next/no-img-element -- gif animado */}
             <img
-              src={'images/projects/kraux-font/animacion-letras.gif'}
+              src={asset('images/projects/kraux-font/animacion-letras.gif')}
               alt="Animación de letras de la tipografía Kraux"
               className="absolute inset-0 h-full w-full object-cover"
               loading="lazy"
@@ -78,7 +79,7 @@ export function KrauxProjectContent() {
           <div className="relative w-full overflow-hidden" style={{ aspectRatio: 1076 / 1286 }}>
             {/* eslint-disable-next-line @next/next/no-img-element */}
             <img
-              src="images/projects/kraux-font/crowd-sold-out.jpg"
+              src={asset('images/projects/kraux-font/crowd-sold-out.jpg')}
               alt="Sesión sold out con la estética Florida 135"
               loading="lazy"
               sizes="(min-width: 768px) 29vw, 50vw"
@@ -92,7 +93,7 @@ export function KrauxProjectContent() {
           <div className="relative w-full overflow-hidden" style={{ aspectRatio: 2200 / 1238 }}>
             {/* eslint-disable-next-line @next/next/no-img-element */}
             <img
-              src="images/projects/kraux-font/zoom-typographic.jpg"
+              src={asset('images/projects/kraux-font/zoom-typographic.jpg')}
               alt="Detalle tipográfico ampliado de la letra K de Kraux"
               loading="lazy"
               sizes="(min-width: 768px) 58vw, 100vw"
@@ -106,7 +107,7 @@ export function KrauxProjectContent() {
           <div className="relative w-full overflow-hidden" style={{ aspectRatio: 1092 / 1648 }}>
             {/* eslint-disable-next-line @next/next/no-img-element */}
             <img
-              src="images/projects/kraux-font/web-poster.jpg"
+              src={asset('images/projects/kraux-font/web-poster.jpg')}
               alt="Cartel KRAUX en amarillo y rosa con el sistema tipográfico completo"
               loading="lazy"
               sizes="(min-width: 768px) 29vw, 50vw"
@@ -116,7 +117,7 @@ export function KrauxProjectContent() {
           <div className="relative w-full overflow-hidden" style={{ aspectRatio: 1092 / 1648 }}>
             {/* eslint-disable-next-line @next/next/no-img-element -- gif animado */}
             <img
-              src={'images/projects/kraux-font/motion-mockups.gif'}
+              src={asset('images/projects/kraux-font/motion-mockups.gif')}
               alt="Mockups en movimiento de la tipografía Kraux"
               className="absolute inset-0 h-full w-full object-cover"
               loading="lazy"
@@ -128,7 +129,7 @@ export function KrauxProjectContent() {
         <div className="relative w-full overflow-hidden" style={{ aspectRatio: 1117 / 985 }}>
             {/* eslint-disable-next-line @next/next/no-img-element */}
             <img
-              src="images/projects/kraux-font/alphabet-specimen.jpg"
+              src={asset('images/projects/kraux-font/alphabet-specimen.jpg')}
               alt="Specimen del alfabeto completo de Kraux Font"
               loading="lazy"
               sizes="(min-width: 768px) 58vw, 100vw"
@@ -141,7 +142,7 @@ export function KrauxProjectContent() {
           <div className="relative w-full overflow-hidden" style={{ aspectRatio: 360 / 532 }}>
             {/* eslint-disable-next-line @next/next/no-img-element */}
             <img
-              src="images/projects/kraux-font/hero-ambiente.jpg"
+              src={asset('images/projects/kraux-font/hero-ambiente.jpg')}
               alt="Ambiente del club Florida 135"
               loading="lazy"
               sizes="(min-width: 768px) 29vw, 50vw"
@@ -151,7 +152,7 @@ export function KrauxProjectContent() {
           <div className="relative w-full overflow-hidden" style={{ aspectRatio: 360 / 532 }}>
             {/* eslint-disable-next-line @next/next/no-img-element -- gif animado */}
             <img
-              src={'images/projects/kraux-font/poster-buenri.gif'}
+              src={asset('images/projects/kraux-font/poster-buenri.gif')}
               alt="Animación de reducción del cartel Buenri"
               className="absolute inset-0 h-full w-full object-cover"
               loading="lazy"
@@ -163,7 +164,7 @@ export function KrauxProjectContent() {
         <div className="relative w-full overflow-hidden" style={{ aspectRatio: 2200 / 1467 }}>
           {/* eslint-disable-next-line @next/next/no-img-element */}
             <img
-              src="images/projects/kraux-font/street-posters.jpg"
+              src={asset('images/projects/kraux-font/street-posters.jpg')}
               alt="Mockup de tres carteles de Kraux Font en la calle"
               loading="lazy"
               sizes="(min-width: 768px) 58vw, 100vw"

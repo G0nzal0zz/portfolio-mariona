@@ -3,6 +3,7 @@
 import Link from 'next/link';
 import { useLanguage } from '@/lib/language-context';
 import type { Project } from '@/data/projects';
+import { asset } from '@/lib/asset-path';
 
 export function ProjectCard({ project }: { project: Project }) {
   const { locale } = useLanguage();
@@ -20,7 +21,7 @@ export function ProjectCard({ project }: { project: Project }) {
       onMouseEnter={() => {
         if (project.image && !isVideo) {
           const img = new window.Image();
-          img.src = project.image;
+          img.src = asset(project.image);
         }
       }}
       className="group block"
@@ -31,7 +32,7 @@ export function ProjectCard({ project }: { project: Project }) {
             {/* Capa base: a color, siempre visible */}
             {isVideo ? (
               <video
-                src={project.image}
+                src={asset(project.image!)}
                 autoPlay
                 loop
                 muted
@@ -41,15 +42,17 @@ export function ProjectCard({ project }: { project: Project }) {
             ) : isGif ? (
               // eslint-disable-next-line @next/next/no-img-element
               <img
-                src={project.image}
+                src={asset(project.image!)}
                 alt={project.imageAlt[locale]}
                 loading="lazy"
                 className="absolute inset-0 h-full w-full object-cover"
               />
             ) : (
-              // eslint-disable-next-line @next/next/no-img-element
+              // eslint-disable-next-line @next/next-no-img-element -- but it's the
+              // only way to serve unoptimized images as <img> without using
+              // next/image, which <GifBlock> already avoids for GIFs.
               <img
-                src={project.image}
+                src={asset(project.image!)}
                 alt={project.imageAlt[locale]}
                 loading="lazy"
                 sizes="(min-width: 768px) 25vw, 50vw"
@@ -67,7 +70,7 @@ export function ProjectCard({ project }: { project: Project }) {
             >
               {isVideo ? (
                 <video
-                  src={project.image}
+                  src={asset(project.image!)}
                   autoPlay
                   loop
                   muted
@@ -78,7 +81,7 @@ export function ProjectCard({ project }: { project: Project }) {
               ) : isGif ? (
                 // eslint-disable-next-line @next/next/no-img-element
                 <img
-                  src={project.image}
+                  src={asset(project.image!)}
                   alt=""
                   aria-hidden="true"
                   className="absolute inset-0 h-full w-full object-cover grayscale"
@@ -86,7 +89,7 @@ export function ProjectCard({ project }: { project: Project }) {
               ) : (
                 // eslint-disable-next-line @next/next/no-img-element
                 <img
-                  src={project.image}
+                  src={asset(project.image!)}
                   alt=""
                   aria-hidden="true"
                   sizes="(min-width: 768px) 25vw, 50vw"
@@ -108,7 +111,7 @@ export function ProjectCard({ project }: { project: Project }) {
                 }}
               >
                 {/* eslint-disable-next-line @next/next/no-img-element -- decorativo, tamaño fijo */}
-                <img src={project.cursorImage} alt="" className="h-full w-full object-contain drop-shadow-lg" />
+                <img src={asset(project.cursorImage)} alt="" className="h-full w-full object-contain drop-shadow-lg" />
               </div>
             )}
           </>

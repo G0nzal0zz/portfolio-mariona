@@ -3,6 +3,7 @@
 import Link from 'next/link';
 import { useLanguage } from '@/lib/language-context';
 import { muContent } from '@/data/mu-content';
+import { asset } from '@/lib/asset-path';
 
 // Misma estructura que Kraux / Fourth / Diwala: aside fixed 38%/max-w-xl,
 // bloque de párrafos con altura fija y texto alineado abajo para que
@@ -49,7 +50,7 @@ export function MuProjectContent() {
         {/* 1. Vídeo animación logo */}
         <div className="relative w-full overflow-hidden" style={{ aspectRatio: 1400 / 902 }}>
           <video
-            src={'images/projects/mu/animacion-logo.mp4'}
+            src={asset('images/projects/mu/animacion-logo.mp4')}
             autoPlay
             loop
             muted
@@ -63,7 +64,7 @@ export function MuProjectContent() {
           <div className="relative w-full overflow-hidden" style={{ aspectRatio: 1643 / 2200 }}>
             {/* eslint-disable-next-line @next/next/no-img-element */}
             <img
-              src="images/projects/mu/cover.jpg"
+              src={asset('images/projects/mu/cover.jpg')}
               alt="Vaca con etiqueta de la marca Mú"
               loading="lazy"
               sizes="(min-width: 768px) 29vw, 50vw"
@@ -73,7 +74,7 @@ export function MuProjectContent() {
           <div className="relative w-full overflow-hidden" style={{ aspectRatio: 1643 / 2200 }}>
             {/* eslint-disable-next-line @next/next/no-img-element */}
             <img
-              src="images/projects/mu/mockup-botella-prado.jpg"
+              src={asset('images/projects/mu/mockup-botella-prado.jpg')}
               alt="Mockup de la botella Mú en un prado"
               loading="lazy"
               sizes="(min-width: 768px) 29vw, 50vw"
@@ -86,7 +87,7 @@ export function MuProjectContent() {
         <div className="relative w-full overflow-hidden" style={{ aspectRatio: 2200 / 1228 }}>
           {/* eslint-disable-next-line @next/next/no-img-element */}
           <img
-            src="images/projects/mu/vacas-con-leche.jpg"
+            src={asset('images/projects/mu/vacas-con-leche.jpg')}
             alt="Vacas junto a botellas de leche Mú"
             loading="lazy"
             sizes="(min-width: 768px) 58vw, 100vw"
@@ -99,7 +100,7 @@ export function MuProjectContent() {
           <div className="relative w-full overflow-hidden" style={{ aspectRatio: 1465 / 2200 }}>
             {/* eslint-disable-next-line @next/next/no-img-element */}
             <img
-              src="images/projects/mu/estanterias-botellas.jpg"
+              src={asset('images/projects/mu/estanterias-botellas.jpg')}
               alt="Botellas de Mú en estanterías"
               loading="lazy"
               sizes="(min-width: 768px) 29vw, 50vw"
@@ -109,7 +110,7 @@ export function MuProjectContent() {
           <div className="relative w-full overflow-hidden" style={{ aspectRatio: 1465 / 2200 }}>
             {/* eslint-disable-next-line @next/next/no-img-element */}
             <img
-              src="images/projects/mu/pack-botellas.jpg"
+              src={asset('images/projects/mu/pack-botellas.jpg')}
               alt="Pack de botellas Mú"
               loading="lazy"
               sizes="(min-width: 768px) 29vw, 50vw"
@@ -122,7 +123,7 @@ export function MuProjectContent() {
         <div className="relative w-full overflow-hidden" style={{ aspectRatio: 2200 / 1235 }}>
           {/* eslint-disable-next-line @next/next/no-img-element */}
           <img
-            src="images/projects/mu/frame-68.jpg"
+            src={asset('images/projects/mu/frame-68.jpg')}
             alt="Detalle del proyecto Mú"
             loading="lazy"
             sizes="(min-width: 768px) 58vw, 100vw"
@@ -135,7 +136,7 @@ export function MuProjectContent() {
           <div className="relative w-full overflow-hidden" style={{ aspectRatio: 1476 / 2200 }}>
             {/* eslint-disable-next-line @next/next/no-img-element */}
             <img
-              src="images/projects/mu/gemini-generate.jpg"
+              src={asset('images/projects/mu/gemini-generate.jpg')}
               alt="Composición generativa del proyecto Mú"
               loading="lazy"
               sizes="(min-width: 768px) 29vw, 50vw"
@@ -145,7 +146,7 @@ export function MuProjectContent() {
           <div className="relative w-full overflow-hidden" style={{ aspectRatio: 1476 / 2200 }}>
             {/* eslint-disable-next-line @next/next/no-img-element */}
             <img
-              src="images/projects/mu/logo-en-vaca.jpg"
+              src={asset('images/projects/mu/logo-en-vaca.jpg')}
               alt="Logotipo Mú aplicado sobre una vaca"
               loading="lazy"
               sizes="(min-width: 768px) 29vw, 50vw"
@@ -158,7 +159,7 @@ export function MuProjectContent() {
         <div className="relative w-full overflow-hidden" style={{ aspectRatio: 2200 / 1227 }}>
           {/* eslint-disable-next-line @next/next/no-img-element */}
           <img
-            src="images/projects/mu/botella-en-prado.jpg"
+            src={asset('images/projects/mu/botella-en-prado.jpg')}
             alt="Botella Mú en un prado"
             loading="lazy"
             sizes="(min-width: 768px) 58vw, 100vw"

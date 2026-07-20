@@ -3,6 +3,7 @@
 import Link from 'next/link';
 import { useLanguage } from '@/lib/language-context';
 import { fourthContent } from '@/data/fourth-content';
+import { asset } from '@/lib/asset-path';
 
 // Misma estructura de columnas que la página de Kraux (aside fixed al 38% /
 // max-w-xl, texto compacto sin gap entre párrafos). Orden y proporciones de
@@ -49,7 +50,7 @@ export function FourthProjectContent() {
         {/* 1. Vídeo hero rosa, en loop */}
         <div className="relative w-full overflow-hidden" style={{ aspectRatio: 1400 / 788 }}>
           <video
-            src={'images/projects/fourth/hero-rosa.mp4'}
+            src={asset('images/projects/fourth/hero-rosa.mp4')}
             autoPlay
             loop
             muted
@@ -63,7 +64,7 @@ export function FourthProjectContent() {
           <div className="relative w-full overflow-hidden" style={{ aspectRatio: 1250 / 1349 }}>
             {/* eslint-disable-next-line @next/next/no-img-element */}
             <img
-              src="images/projects/fourth/bolso-bote.jpg"
+              src={asset('images/projects/fourth/bolso-bote.jpg')}
               alt="Bote de Fourth guardado en un bolso rosa"
               loading="lazy"
               sizes="(min-width: 768px) 29vw, 50vw"
@@ -73,7 +74,7 @@ export function FourthProjectContent() {
           <div className="relative w-full overflow-hidden" style={{ aspectRatio: 1250 / 1349 }}>
             {/* eslint-disable-next-line @next/next/no-img-element */}
             <img
-              src="images/projects/fourth/diastasis-03.jpg"
+              src={asset('images/projects/fourth/diastasis-03.jpg')}
               alt="Explicación de la diástasis abdominal y el símbolo de Fourth"
               loading="lazy"
               sizes="(min-width: 768px) 29vw, 50vw"
@@ -86,7 +87,7 @@ export function FourthProjectContent() {
         <div className="relative w-full overflow-hidden" style={{ aspectRatio: 2200 / 1228 }}>
           {/* eslint-disable-next-line @next/next/no-img-element */}
           <img
-            src="images/projects/fourth/powder-texture.jpg"
+            src={asset('images/projects/fourth/powder-texture.jpg')}
             alt="Textura de proteína en polvo con el logotipo Fourth grabado"
             loading="lazy"
             sizes="(min-width: 768px) 58vw, 100vw"
@@ -98,7 +99,7 @@ export function FourthProjectContent() {
         <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 md:gap-8">
           <div className="relative w-full overflow-hidden" style={{ aspectRatio: 1000 / 1236 }}>
             <video
-              src={'images/projects/fourth/diastasis-2.mp4'}
+              src={asset('images/projects/fourth/diastasis-2.mp4')}
               autoPlay
               loop
               muted
@@ -109,7 +110,7 @@ export function FourthProjectContent() {
           <div className="relative w-full overflow-hidden" style={{ aspectRatio: 1000 / 1236 }}>
             {/* eslint-disable-next-line @next/next/no-img-element */}
             <img
-              src="images/projects/fourth/todo-cajas.jpg"
+              src={asset('images/projects/fourth/todo-cajas.jpg')}
               alt="Cajas de packaging de Fourth apiladas"
               loading="lazy"
               sizes="(min-width: 768px) 29vw, 50vw"
@@ -122,7 +123,7 @@ export function FourthProjectContent() {
         <div className="relative w-full overflow-hidden" style={{ aspectRatio: 2200 / 1228 }}>
           {/* eslint-disable-next-line @next/next/no-img-element */}
           <img
-            src="images/projects/fourth/packaging-desplegable.jpg"
+            src={asset('images/projects/fourth/packaging-desplegable.jpg')}
             alt="Troquel desplegado del packaging de Fourth"
             loading="lazy"
             sizes="(min-width: 768px) 58vw, 100vw"
@@ -135,7 +136,7 @@ export function FourthProjectContent() {
           <div className="relative w-full overflow-hidden" style={{ aspectRatio: 671 / 1000 }}>
             {/* eslint-disable-next-line @next/next/no-img-element */}
             <img
-              src="images/projects/fourth/mockup-bote.jpg"
+              src={asset('images/projects/fourth/mockup-bote.jpg')}
               alt="Mockup del bote de Fourth"
               loading="lazy"
               sizes="(min-width: 768px) 29vw, 50vw"
@@ -145,7 +146,7 @@ export function FourthProjectContent() {
           <div className="relative w-full overflow-hidden" style={{ aspectRatio: 671 / 1000 }}>
             {/* eslint-disable-next-line @next/next/no-img-element */}
             <img
-              src="images/projects/fourth/mockup-cara.jpg"
+              src={asset('images/projects/fourth/mockup-cara.jpg')}
               alt="Mockup del packaging de Fourth sobre el cuerpo"
               loading="lazy"
               sizes="(min-width: 768px) 29vw, 50vw"
@@ -159,7 +160,7 @@ export function FourthProjectContent() {
           <div className="relative w-full overflow-hidden" style={{ aspectRatio: 671 / 1000 }}>
             {/* eslint-disable-next-line @next/next/no-img-element */}
             <img
-              src="images/projects/fourth/poniendo-proteina.jpg"
+              src={asset('images/projects/fourth/poniendo-proteina.jpg')}
               alt="Preparando la proteína Fourth en un vaso"
               loading="lazy"
               sizes="(min-width: 768px) 29vw, 50vw"
@@ -168,7 +169,7 @@ export function FourthProjectContent() {
           </div>
           <div className="relative w-full overflow-hidden" style={{ aspectRatio: 671 / 1000 }}>
             <video
-              src={'images/projects/fourth/cuerpos.mp4'}
+              src={asset('images/projects/fourth/cuerpos.mp4')}
               autoPlay
               loop
               muted

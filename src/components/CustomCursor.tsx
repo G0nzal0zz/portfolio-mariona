@@ -1,6 +1,7 @@
 'use client';
 
 import { useEffect, useRef, useState } from 'react';
+import { asset } from '@/lib/asset-path';
 
 /**
  * Cursor circular blanco que crece suavemente al pasar sobre cualquier
@@ -73,7 +74,7 @@ export function CustomCursor() {
           aria-hidden="true"
         >
           {/* eslint-disable-next-line @next/next/no-img-element -- cursor decorativo, tamaño fijo pequeño */}
-          <img src={cursorImage} alt="" className="h-full w-full object-contain" />
+          <img src={asset(cursorImage)} alt="" className="h-full w-full object-contain" />
         </div>
       )}
     </>
