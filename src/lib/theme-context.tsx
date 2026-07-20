@@ -10,8 +10,19 @@ type ThemeContextValue = {
 
 const ThemeContext = createContext<ThemeContextValue | null>(null);
 
-export function ThemeProvider({ initialTheme, children }: { initialTheme: Theme; children: ReactNode }) {
-  const [theme, setThemeState] = useState<Theme>(initialTheme);
+export function ThemeProvider({ children }: { children: ReactNode }) {
+  const [theme, setThemeState] = useState<Theme>('dark');
+
+  useEffect(() => {
+    const match = document.cookie.match(new RegExp(`(^| )${THEME_COOKIE}=([^;]+)`));
+    const stored = match?.[2];
+    if (stored === 'light' || stored === 'dark') {
+      setThemeState(stored);
+      document.documentElement.dataset.theme = stored;
+    } else {
+      document.documentElement.dataset.theme = theme;
+    }
+  }, []); // eslint-disable-line react-hooks/exhaustive-deps
 
   useEffect(() => {
     document.documentElement.dataset.theme = theme;

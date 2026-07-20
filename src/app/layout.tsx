@@ -1,6 +1,6 @@
 import type { Metadata } from 'next';
 import './globals.css';
-import { getServerTheme } from '@/lib/get-server-theme';
+import { THEME_COOKIE } from '@/lib/theme';
 import { ThemeProvider } from '@/lib/theme-context';
 import { LanguageProvider } from '@/lib/language-context';
 import { SmoothScroll } from '@/components/SmoothScroll';
@@ -16,16 +16,25 @@ export const metadata: Metadata = {
     'Portfolio de Mariona Larroya, diseñadora gráfica especializada en identidad de marca, packaging y dirección de arte.',
 };
 
-export default function RootLayout({ children }: { children: React.ReactNode }) {
-  const theme = getServerTheme();
+const themeScript = `
+  (function() {
+    var match = document.cookie.match(new RegExp('(^| )' + '${THEME_COOKIE}' + '=([^;]+)'));
+    var theme = match ? match[2] : 'dark';
+    document.documentElement.setAttribute('data-theme', theme);
+  })();
+`;
 
+export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
-    <html lang="es" data-theme={theme}>
+    <html lang="es" data-theme="dark">
+      <head>
+        <script dangerouslySetInnerHTML={{ __html: themeScript }} />
+      </head>
       <body>
         {/* ThemeProvider vive aquí, en el layout raíz, que no se vuelve a montar
             al navegar entre páginas — así el tema no se desincroniza al cambiar
             de página justo después de alternarlo (el bug que reportaste). */}
-        <ThemeProvider initialTheme={theme}>
+        <ThemeProvider>
           <LanguageProvider>
             <SmoothScroll>
               <CustomCursor />
