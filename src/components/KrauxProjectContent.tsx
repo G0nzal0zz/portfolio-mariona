@@ -70,7 +70,7 @@ export function KrauxProjectContent() {
           <div className="relative w-full overflow-hidden" style={{ aspectRatio: 1076 / 1286 }}>
             {/* eslint-disable-next-line @next/next/no-img-element -- gif animado */}
             <img
-              src={images/projects/kraux-font/animacion-letras.gif')}
+              src={'images/projects/kraux-font/animacion-letras.gif'}
               alt="Animación de letras de la tipografía Kraux"
               className="absolute inset-0 h-full w-full object-cover"
               loading="lazy"
