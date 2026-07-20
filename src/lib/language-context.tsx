@@ -6,7 +6,7 @@ import { content, type Locale } from '@/data/content';
 type LanguageContextValue = {
   locale: Locale;
   setLocale: (locale: Locale) => void;
-  t: (typeof content)['es'];
+  t: (typeof content)[Locale];
 };
 
 const LanguageContext = createContext<LanguageContextValue | null>(null);
