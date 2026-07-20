@@ -1,0 +1,168 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  /* Alternativa temporal hasta disponer de los .woff2 de Saans / Saans Mono */
+  --font-display: 'Neue Haas Grotesk Display Pro', 'Helvetica Neue', Arial, sans-serif;
+  --font-mono: 'JetBrains Mono', ui-monospace, 'SFMono-Regular', monospace;
+
+  --electric: #0025ff;
+  --paper: #ffffff;
+
+  /* Tema DARK (por defecto): fondo azul, texto blanco */
+  --bg: var(--electric);
+  --fg: var(--paper);
+
+  --cursor-size: 14px;
+  --ease-editorial: cubic-bezier(0.65, 0, 0.35, 1);
+}
+
+html[data-theme='light'] {
+  /* Tema LIGHT: fondo blanco, texto azul */
+  --bg: var(--paper);
+  --fg: var(--electric);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  padding: 0;
+  margin: 0;
+  background: var(--bg);
+  color: var(--fg);
+  max-width: 100%;
+  overflow-x: hidden;
+}
+
+body {
+  font-family: var(--font-display), Arial, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
+
+::selection {
+  background: var(--fg);
+  color: var(--bg);
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+button {
+  font: inherit;
+  color: inherit;
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+/* Foco visible siempre, para accesibilidad — nunca se elimina el outline */
+:focus-visible {
+  outline: 2px solid var(--fg);
+  outline-offset: 4px;
+}
+
+/* --- Cursor personalizado (solo puntero fino: ratón) --- */
+@media (hover: hover) and (pointer: fine) {
+  html {
+    cursor: none;
+  }
+
+  a,
+  button {
+    cursor: none;
+  }
+}
+
+.custom-cursor {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 100;
+  width: var(--cursor-size);
+  height: var(--cursor-size);
+  border-radius: 50%;
+  background: var(--fg);
+  pointer-events: none;
+  will-change: transform, width, height;
+  transform: translate3d(-50%, -50%, 0);
+  transition: width 0.35s var(--ease-editorial), height 0.35s var(--ease-editorial);
+}
+
+.custom-cursor--active {
+  /* Crecimiento sutil (~28%), no un salto grande */
+  width: calc(var(--cursor-size) * 1.28);
+  height: calc(var(--cursor-size) * 1.28);
+}
+
+.custom-cursor {
+  transition: width 0.35s var(--ease-editorial), height 0.35s var(--ease-editorial),
+    opacity 0.25s var(--ease-editorial);
+}
+
+/* Imagen de cursor específica de un proyecto (sustituye al círculo).
+   El wrapper solo lleva la posición (la actualiza JS vía style.transform);
+   la escala/opacity de aparición vive en el <img> hijo para no chocar con eso. */
+.custom-cursor-image {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 100;
+  width: 120px;
+  height: 120px;
+  pointer-events: none;
+}
+
+.custom-cursor-image img {
+  opacity: 0;
+  transform: scale(0.6);
+  transition: opacity 0.3s var(--ease-editorial), transform 0.3s var(--ease-editorial);
+}
+
+.custom-cursor-image--active img {
+  opacity: 1;
+  transform: scale(1);
+}
+
+/* --- Reveal en scroll: fade + desplazamiento vertical sutil --- */
+.reveal {
+  opacity: 0;
+  transform: translateY(16px);
+  transition: opacity 0.8s var(--ease-editorial), transform 0.8s var(--ease-editorial);
+}
+
+.reveal.is-visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.001ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.001ms !important;
+    scroll-behavior: auto !important;
+  }
+
+  .reveal {
+    opacity: 1;
+    transform: none;
+  }
+
+  html {
+    cursor: auto;
+  }
+
+  .custom-cursor,
+  .custom-cursor-image {
+    display: none;
+  }
+}
