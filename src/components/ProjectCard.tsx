@@ -2,6 +2,7 @@
 
 import Image from 'next/image';
 import Link from 'next/link';
+import { assetPath } from '@/lib/asset-path';
 import { useLanguage } from '@/lib/language-context';
 import type { Project } from '@/data/projects';
 
@@ -16,12 +17,12 @@ export function ProjectCard({ project }: { project: Project }) {
     <Link
       href={`/work/${project.slug}`}
       data-cursor="view"
-      data-cursor-image={isStaticCursor ? undefined : project.cursorImage}
+      data-cursor-image={isStaticCursor ? undefined : assetPath(project.cursorImage ?? '')}
       data-cursor-image-size={isStaticCursor ? undefined : project.cursorImageSize}
       onMouseEnter={() => {
         if (project.image && !isVideo) {
           const img = new window.Image();
-          img.src = project.image;
+          img.src = assetPath(project.image);
         }
       }}
       className="group block"
@@ -32,7 +33,7 @@ export function ProjectCard({ project }: { project: Project }) {
             {/* Capa base: a color, siempre visible */}
             {isVideo ? (
               <video
-                src={project.image}
+                src={assetPath(project.image)}
                 autoPlay
                 loop
                 muted
@@ -42,7 +43,7 @@ export function ProjectCard({ project }: { project: Project }) {
             ) : isGif ? (
               // eslint-disable-next-line @next/next/no-img-element
               <img
-                src={project.image}
+                src={assetPath(project.image)}
                 alt={project.imageAlt[locale]}
                 loading="lazy"
                 className="absolute inset-0 h-full w-full object-cover"
@@ -68,7 +69,7 @@ export function ProjectCard({ project }: { project: Project }) {
             >
               {isVideo ? (
                 <video
-                  src={project.image}
+                  src={assetPath(project.image)}
                   autoPlay
                   loop
                   muted
@@ -79,7 +80,7 @@ export function ProjectCard({ project }: { project: Project }) {
               ) : isGif ? (
                 // eslint-disable-next-line @next/next/no-img-element
                 <img
-                  src={project.image}
+                  src={assetPath(project.image)}
                   alt=""
                   aria-hidden="true"
                   className="absolute inset-0 h-full w-full object-cover grayscale"
@@ -109,7 +110,7 @@ export function ProjectCard({ project }: { project: Project }) {
                 }}
               >
                 {/* eslint-disable-next-line @next/next/no-img-element -- decorativo, tamaño fijo */}
-                <img src={project.cursorImage} alt="" className="h-full w-full object-contain drop-shadow-lg" />
+                <img src={assetPath(project.cursorImage)} alt="" className="h-full w-full object-contain drop-shadow-lg" />
               </div>
             )}
           </>

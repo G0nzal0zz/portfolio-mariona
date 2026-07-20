@@ -2,6 +2,7 @@
 
 import Link from 'next/link';
 import Image from 'next/image';
+import { assetPath } from '@/lib/asset-path';
 import { useLanguage } from '@/lib/language-context';
 import { fourthContent } from '@/data/fourth-content';
 
@@ -50,7 +51,7 @@ export function FourthProjectContent() {
         {/* 1. Vídeo hero rosa, en loop */}
         <div className="relative w-full overflow-hidden" style={{ aspectRatio: 1400 / 788 }}>
           <video
-            src="/images/projects/fourth/hero-rosa.mp4"
+            src={assetPath('/images/projects/fourth/hero-rosa.mp4')}
             autoPlay
             loop
             muted
@@ -99,7 +100,7 @@ export function FourthProjectContent() {
         <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 md:gap-8">
           <div className="relative w-full overflow-hidden" style={{ aspectRatio: 1000 / 1236 }}>
             <video
-              src="/images/projects/fourth/diastasis-2.mp4"
+              src={assetPath('/images/projects/fourth/diastasis-2.mp4')}
               autoPlay
               loop
               muted
@@ -169,7 +170,7 @@ export function FourthProjectContent() {
           </div>
           <div className="relative w-full overflow-hidden" style={{ aspectRatio: 671 / 1000 }}>
             <video
-              src="/images/projects/fourth/cuerpos.mp4"
+              src={assetPath('/images/projects/fourth/cuerpos.mp4')}
               autoPlay
               loop
               muted

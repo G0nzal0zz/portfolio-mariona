@@ -2,6 +2,7 @@
 
 import Link from 'next/link';
 import Image from 'next/image';
+import { assetPath } from '@/lib/asset-path';
 import { useLanguage } from '@/lib/language-context';
 import { diwalaContent } from '@/data/diwala-content';
 
@@ -48,7 +49,7 @@ export function DiwalaProjectContent() {
         {/* 1. Vídeo logo Diwala */}
         <div className="relative w-full overflow-hidden" style={{ aspectRatio: 1400 / 788 }}>
           <video
-            src="/images/projects/diwala/diwala-logo.mp4"
+            src={assetPath('/images/projects/diwala/diwala-logo.mp4')}
             autoPlay
             loop
             muted
@@ -107,7 +108,7 @@ export function DiwalaProjectContent() {
           </div>
           <div className="relative w-full overflow-hidden" style={{ aspectRatio: 800 / 1140 }}>
             <video
-              src="/images/projects/diwala/diwala-telas.mp4"
+              src={assetPath('/images/projects/diwala/diwala-telas.mp4')}
               autoPlay
               loop
               muted
@@ -120,7 +121,7 @@ export function DiwalaProjectContent() {
         {/* 5. Vídeo Mariona Larroya */}
         <div className="relative w-full overflow-hidden" style={{ aspectRatio: 1400 / 780 }}>
           <video
-            src="/images/projects/diwala/mariona-larroya.mp4"
+            src={assetPath('/images/projects/diwala/mariona-larroya.mp4')}
             autoPlay
             loop
             muted

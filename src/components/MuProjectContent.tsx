@@ -2,6 +2,7 @@
 
 import Link from 'next/link';
 import Image from 'next/image';
+import { assetPath } from '@/lib/asset-path';
 import { useLanguage } from '@/lib/language-context';
 import { muContent } from '@/data/mu-content';
 
@@ -50,7 +51,7 @@ export function MuProjectContent() {
         {/* 1. Vídeo animación logo */}
         <div className="relative w-full overflow-hidden" style={{ aspectRatio: 1400 / 902 }}>
           <video
-            src="/images/projects/mu/animacion-logo.mp4"
+            src={assetPath('/images/projects/mu/animacion-logo.mp4')}
             autoPlay
             loop
             muted

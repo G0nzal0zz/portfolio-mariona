@@ -2,6 +2,7 @@
 
 import Link from 'next/link';
 import Image from 'next/image';
+import { assetPath } from '@/lib/asset-path';
 import { useLanguage } from '@/lib/language-context';
 import { krauxContent } from '@/data/kraux-content';
 
@@ -20,7 +21,7 @@ import { krauxContent } from '@/data/kraux-content';
 function GifBlock({ src, alt, ratio }: { src: string; alt: string; ratio: number }) {
   return (
     // eslint-disable-next-line @next/next/no-img-element -- gif animado, next/image lo congelaría
-    <img src={src} alt={alt} className="w-full" style={{ aspectRatio: ratio, objectFit: 'cover' }} loading="lazy" />
+    <img src={assetPath(src)} alt={alt} className="w-full" style={{ aspectRatio: ratio, objectFit: 'cover' }} loading="lazy" />
   );
 }
 
@@ -70,7 +71,7 @@ export function KrauxProjectContent() {
           <div className="relative w-full overflow-hidden" style={{ aspectRatio: 1076 / 1286 }}>
             {/* eslint-disable-next-line @next/next/no-img-element -- gif animado */}
             <img
-              src="/images/projects/kraux-font/animacion-letras.gif"
+              src={assetPath('/images/projects/kraux-font/animacion-letras.gif')}
               alt="Animación de letras de la tipografía Kraux"
               className="absolute inset-0 h-full w-full object-cover"
               loading="lazy"
@@ -117,7 +118,7 @@ export function KrauxProjectContent() {
           <div className="relative w-full overflow-hidden" style={{ aspectRatio: 1092 / 1648 }}>
             {/* eslint-disable-next-line @next/next/no-img-element -- gif animado */}
             <img
-              src="/images/projects/kraux-font/motion-mockups.gif"
+              src={assetPath('/images/projects/kraux-font/motion-mockups.gif')}
               alt="Mockups en movimiento de la tipografía Kraux"
               className="absolute inset-0 h-full w-full object-cover"
               loading="lazy"
@@ -152,7 +153,7 @@ export function KrauxProjectContent() {
           <div className="relative w-full overflow-hidden" style={{ aspectRatio: 360 / 532 }}>
             {/* eslint-disable-next-line @next/next/no-img-element -- gif animado */}
             <img
-              src="/images/projects/kraux-font/poster-buenri.gif"
+              src={assetPath('/images/projects/kraux-font/poster-buenri.gif')}
               alt="Animación de reducción del cartel Buenri"
               className="absolute inset-0 h-full w-full object-cover"
               loading="lazy"
