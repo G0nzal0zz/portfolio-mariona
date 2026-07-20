@@ -1,7 +1,6 @@
 'use client';
 
 import Link from 'next/link';
-import Image from 'next/image';
 import { useLanguage } from '@/lib/language-context';
 import { diwalaContent } from '@/data/diwala-content';
 
@@ -60,49 +59,49 @@ export function DiwalaProjectContent() {
         {/* 2. mockup vela + mockup cálido */}
         <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 md:gap-8">
           <div className="relative w-full overflow-hidden" style={{ aspectRatio: 1476 / 2200 }}>
-            <Image
+            {/* eslint-disable-next-line @next/next/no-img-element */}
+            <img
               src="images/projects/diwala/mockup-diwala-vela.jpg"
               alt="Mockup de la vela Diwala"
-              fill
               loading="lazy"
               sizes="(min-width: 768px) 29vw, 50vw"
-              className="object-cover"
+              className="absolute inset-0 h-full w-full object-cover"
             />
           </div>
           <div className="relative w-full overflow-hidden" style={{ aspectRatio: 1476 / 2200 }}>
-            <Image
+            {/* eslint-disable-next-line @next/next/no-img-element */}
+            <img
               src="images/projects/diwala/cover.jpg"
               alt="Mockup cálido del packaging de Diwala"
-              fill
               loading="lazy"
               sizes="(min-width: 768px) 29vw, 50vw"
-              className="object-cover"
+              className="absolute inset-0 h-full w-full object-cover"
             />
           </div>
         </div>
 
         {/* 3. Diwala libro */}
         <div className="relative w-full overflow-hidden" style={{ aspectRatio: 2200 / 1227 }}>
-          <Image
+          {/* eslint-disable-next-line @next/next/no-img-element */}
+          <img
             src="images/projects/diwala/libro.jpg"
             alt="Libro de marca de Diwala"
-            fill
             loading="lazy"
             sizes="(min-width: 768px) 58vw, 100vw"
-            className="object-cover"
+            className="absolute inset-0 h-full w-full object-cover"
           />
         </div>
 
         {/* 4. Velas + vídeo telas */}
         <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 md:gap-8">
           <div className="relative w-full overflow-hidden" style={{ aspectRatio: 800 / 1140 }}>
-            <Image
+            {/* eslint-disable-next-line @next/next/no-img-element */}
+            <img
               src="images/projects/diwala/velas.jpg"
               alt="Velas aromáticas Diwala"
-              fill
               loading="lazy"
               sizes="(min-width: 768px) 29vw, 50vw"
-              className="object-cover"
+              className="absolute inset-0 h-full w-full object-cover"
             />
           </div>
           <div className="relative w-full overflow-hidden" style={{ aspectRatio: 800 / 1140 }}>
@@ -132,23 +131,23 @@ export function DiwalaProjectContent() {
         {/* 6. Foto 8a17b + frame 29 */}
         <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 md:gap-8">
           <div className="relative w-full overflow-hidden" style={{ aspectRatio: 1080 / 1350 }}>
-            <Image
+            {/* eslint-disable-next-line @next/next/no-img-element */}
+            <img
               src="images/projects/diwala/photo-8a17b.jpg"
               alt="Detalle del proyecto Diwala"
-              fill
               loading="lazy"
               sizes="(min-width: 768px) 29vw, 50vw"
-              className="object-cover"
+              className="absolute inset-0 h-full w-full object-cover"
             />
           </div>
           <div className="relative w-full overflow-hidden" style={{ aspectRatio: 1080 / 1350 }}>
-            <Image
+            {/* eslint-disable-next-line @next/next/no-img-element */}
+            <img
               src="images/projects/diwala/frame-29.jpg"
               alt="Detalle del proyecto Diwala"
-              fill
               loading="lazy"
               sizes="(min-width: 768px) 29vw, 50vw"
-              className="object-cover"
+              className="absolute inset-0 h-full w-full object-cover"
             />
           </div>
         </div>

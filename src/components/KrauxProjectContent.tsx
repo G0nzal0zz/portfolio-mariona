@@ -1,7 +1,6 @@
 'use client';
 
 import Link from 'next/link';
-import Image from 'next/image';
 import { useLanguage } from '@/lib/language-context';
 import { krauxContent } from '@/data/kraux-content';
 
@@ -77,13 +76,13 @@ export function KrauxProjectContent() {
             />
           </div>
           <div className="relative w-full overflow-hidden" style={{ aspectRatio: 1076 / 1286 }}>
-            <Image
+            {/* eslint-disable-next-line @next/next/no-img-element */}
+            <img
               src="images/projects/kraux-font/crowd-sold-out.jpg"
               alt="Sesión sold out con la estética Florida 135"
-              fill
               loading="lazy"
               sizes="(min-width: 768px) 29vw, 50vw"
-              className="object-cover"
+              className="absolute inset-0 h-full w-full object-cover"
             />
           </div>
         </div>
@@ -91,13 +90,13 @@ export function KrauxProjectContent() {
         {/* 3. Bloque tipográfico (zoom), fondo negro */}
         <div className="w-full bg-black p-4 md:p-6">
           <div className="relative w-full overflow-hidden" style={{ aspectRatio: 2200 / 1238 }}>
-            <Image
+            {/* eslint-disable-next-line @next/next/no-img-element */}
+            <img
               src="images/projects/kraux-font/zoom-typographic.jpg"
               alt="Detalle tipográfico ampliado de la letra K de Kraux"
-              fill
               loading="lazy"
               sizes="(min-width: 768px) 58vw, 100vw"
-              className="object-contain"
+              className="absolute inset-0 h-full w-full object-contain"
             />
           </div>
         </div>
@@ -105,13 +104,13 @@ export function KrauxProjectContent() {
         {/* 4. Poster web + motion mockups — misma altura */}
         <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 md:gap-8">
           <div className="relative w-full overflow-hidden" style={{ aspectRatio: 1092 / 1648 }}>
-            <Image
+            {/* eslint-disable-next-line @next/next/no-img-element */}
+            <img
               src="images/projects/kraux-font/web-poster.jpg"
               alt="Cartel KRAUX en amarillo y rosa con el sistema tipográfico completo"
-              fill
               loading="lazy"
               sizes="(min-width: 768px) 29vw, 50vw"
-              className="object-cover"
+              className="absolute inset-0 h-full w-full object-cover"
             />
           </div>
           <div className="relative w-full overflow-hidden" style={{ aspectRatio: 1092 / 1648 }}>
@@ -127,26 +126,26 @@ export function KrauxProjectContent() {
 
         {/* 5. Specimen del alfabeto */}
         <div className="relative w-full overflow-hidden" style={{ aspectRatio: 1117 / 985 }}>
-          <Image
-            src="images/projects/kraux-font/alphabet-specimen.jpg"
-            alt="Specimen del alfabeto completo de Kraux Font"
-            fill
-            loading="lazy"
-            sizes="(min-width: 768px) 58vw, 100vw"
-            className="object-cover"
-          />
+            {/* eslint-disable-next-line @next/next/no-img-element */}
+            <img
+              src="images/projects/kraux-font/alphabet-specimen.jpg"
+              alt="Specimen del alfabeto completo de Kraux Font"
+              loading="lazy"
+              sizes="(min-width: 768px) 58vw, 100vw"
+              className="absolute inset-0 h-full w-full object-cover"
+            />
         </div>
 
         {/* 6. Florida 135 + reducción cartel Buenri — misma altura, recortadas */}
         <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 md:gap-8">
           <div className="relative w-full overflow-hidden" style={{ aspectRatio: 360 / 532 }}>
-            <Image
+            {/* eslint-disable-next-line @next/next/no-img-element */}
+            <img
               src="images/projects/kraux-font/hero-ambiente.jpg"
               alt="Ambiente del club Florida 135"
-              fill
               loading="lazy"
               sizes="(min-width: 768px) 29vw, 50vw"
-              className="object-cover"
+              className="absolute inset-0 h-full w-full object-cover"
             />
           </div>
           <div className="relative w-full overflow-hidden" style={{ aspectRatio: 360 / 532 }}>
@@ -162,14 +161,14 @@ export function KrauxProjectContent() {
 
         {/* 7. Mockup de tres carteles en la calle */}
         <div className="relative w-full overflow-hidden" style={{ aspectRatio: 2200 / 1467 }}>
-          <Image
-            src="images/projects/kraux-font/street-posters.jpg"
-            alt="Mockup de tres carteles de Kraux Font en la calle"
-            fill
-            loading="lazy"
-            sizes="(min-width: 768px) 58vw, 100vw"
-            className="object-cover"
-          />
+          {/* eslint-disable-next-line @next/next/no-img-element */}
+            <img
+              src="images/projects/kraux-font/street-posters.jpg"
+              alt="Mockup de tres carteles de Kraux Font en la calle"
+              loading="lazy"
+              sizes="(min-width: 768px) 58vw, 100vw"
+              className="absolute inset-0 h-full w-full object-cover"
+            />
         </div>
       </div>
     </main>

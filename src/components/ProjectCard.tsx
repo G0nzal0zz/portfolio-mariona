@@ -1,6 +1,5 @@
 'use client';
 
-import Image from 'next/image';
 import Link from 'next/link';
 import { useLanguage } from '@/lib/language-context';
 import type { Project } from '@/data/projects';
@@ -48,13 +47,13 @@ export function ProjectCard({ project }: { project: Project }) {
                 className="absolute inset-0 h-full w-full object-cover"
               />
             ) : (
-              <Image
+              // eslint-disable-next-line @next/next/no-img-element
+              <img
                 src={project.image}
                 alt={project.imageAlt[locale]}
-                fill
                 loading="lazy"
                 sizes="(min-width: 768px) 25vw, 50vw"
-                className="object-cover"
+                className="absolute inset-0 h-full w-full object-cover"
               />
             )}
 
@@ -85,13 +84,13 @@ export function ProjectCard({ project }: { project: Project }) {
                   className="absolute inset-0 h-full w-full object-cover grayscale"
                 />
               ) : (
-                <Image
+                // eslint-disable-next-line @next/next/no-img-element
+                <img
                   src={project.image}
                   alt=""
                   aria-hidden="true"
-                  fill
                   sizes="(min-width: 768px) 25vw, 50vw"
-                  className="object-cover grayscale"
+                  className="absolute inset-0 h-full w-full object-cover grayscale"
                 />
               )}
               <div className="absolute inset-0 bg-[#3349CC] mix-blend-color" />

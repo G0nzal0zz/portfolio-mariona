@@ -1,7 +1,6 @@
 'use client';
 
 import Link from 'next/link';
-import Image from 'next/image';
 import { useLanguage } from '@/lib/language-context';
 import { fourthContent } from '@/data/fourth-content';
 
@@ -35,7 +34,7 @@ export function FourthProjectContent() {
         </div>
 
         <div className="mt-6 flex flex-wrap gap-x-2 font-mono text-xs tracking-wide opacity-70">
-          <span>*002 //</span>
+          G
           <Link href="/work/kraux-font" data-cursor="view" className="hover:opacity-100 hover:underline underline-offset-4">
             {c.prev}
           </Link>
@@ -62,36 +61,36 @@ export function FourthProjectContent() {
         {/* 2. bolso_bote + diástasis 03 — misma altura */}
         <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 md:gap-8">
           <div className="relative w-full overflow-hidden" style={{ aspectRatio: 1250 / 1349 }}>
-            <Image
+            {/* eslint-disable-next-line @next/next/no-img-element */}
+            <img
               src="images/projects/fourth/bolso-bote.jpg"
               alt="Bote de Fourth guardado en un bolso rosa"
-              fill
               loading="lazy"
               sizes="(min-width: 768px) 29vw, 50vw"
-              className="object-cover"
+              className="absolute inset-0 h-full w-full object-cover"
             />
           </div>
           <div className="relative w-full overflow-hidden" style={{ aspectRatio: 1250 / 1349 }}>
-            <Image
+            {/* eslint-disable-next-line @next/next/no-img-element */}
+            <img
               src="images/projects/fourth/diastasis-03.jpg"
               alt="Explicación de la diástasis abdominal y el símbolo de Fourth"
-              fill
               loading="lazy"
               sizes="(min-width: 768px) 29vw, 50vw"
-              className="object-cover"
+              className="absolute inset-0 h-full w-full object-cover"
             />
           </div>
         </div>
 
         {/* 3. Textura de polvo con el logo grabado */}
         <div className="relative w-full overflow-hidden" style={{ aspectRatio: 2200 / 1228 }}>
-          <Image
+          {/* eslint-disable-next-line @next/next/no-img-element */}
+          <img
             src="images/projects/fourth/powder-texture.jpg"
             alt="Textura de proteína en polvo con el logotipo Fourth grabado"
-            fill
             loading="lazy"
             sizes="(min-width: 768px) 58vw, 100vw"
-            className="object-cover"
+            className="absolute inset-0 h-full w-full object-cover"
           />
         </div>
 
@@ -108,49 +107,49 @@ export function FourthProjectContent() {
             />
           </div>
           <div className="relative w-full overflow-hidden" style={{ aspectRatio: 1000 / 1236 }}>
-            <Image
+            {/* eslint-disable-next-line @next/next/no-img-element */}
+            <img
               src="images/projects/fourth/todo-cajas.jpg"
               alt="Cajas de packaging de Fourth apiladas"
-              fill
               loading="lazy"
               sizes="(min-width: 768px) 29vw, 50vw"
-              className="object-cover"
+              className="absolute inset-0 h-full w-full object-cover"
             />
           </div>
         </div>
 
         {/* 5. Packaging desplegable */}
         <div className="relative w-full overflow-hidden" style={{ aspectRatio: 2200 / 1228 }}>
-          <Image
+          {/* eslint-disable-next-line @next/next/no-img-element */}
+          <img
             src="images/projects/fourth/packaging-desplegable.jpg"
             alt="Troquel desplegado del packaging de Fourth"
-            fill
             loading="lazy"
             sizes="(min-width: 768px) 58vw, 100vw"
-            className="object-cover"
+            className="absolute inset-0 h-full w-full object-cover"
           />
         </div>
 
         {/* 6. mockup bote + mockup cara */}
         <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 md:gap-8">
           <div className="relative w-full overflow-hidden" style={{ aspectRatio: 671 / 1000 }}>
-            <Image
+            {/* eslint-disable-next-line @next/next/no-img-element */}
+            <img
               src="images/projects/fourth/mockup-bote.jpg"
               alt="Mockup del bote de Fourth"
-              fill
               loading="lazy"
               sizes="(min-width: 768px) 29vw, 50vw"
-              className="object-cover"
+              className="absolute inset-0 h-full w-full object-cover"
             />
           </div>
           <div className="relative w-full overflow-hidden" style={{ aspectRatio: 671 / 1000 }}>
-            <Image
+            {/* eslint-disable-next-line @next/next/no-img-element */}
+            <img
               src="images/projects/fourth/mockup-cara.jpg"
               alt="Mockup del packaging de Fourth sobre el cuerpo"
-              fill
               loading="lazy"
               sizes="(min-width: 768px) 29vw, 50vw"
-              className="object-cover"
+              className="absolute inset-0 h-full w-full object-cover"
             />
           </div>
         </div>
@@ -158,13 +157,13 @@ export function FourthProjectContent() {
         {/* 7. poniendo proteína + vídeo cuerpos (loop) */}
         <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 md:gap-8">
           <div className="relative w-full overflow-hidden" style={{ aspectRatio: 671 / 1000 }}>
-            <Image
+            {/* eslint-disable-next-line @next/next/no-img-element */}
+            <img
               src="images/projects/fourth/poniendo-proteina.jpg"
               alt="Preparando la proteína Fourth en un vaso"
-              fill
               loading="lazy"
               sizes="(min-width: 768px) 29vw, 50vw"
-              className="object-cover"
+              className="absolute inset-0 h-full w-full object-cover"
             />
           </div>
           <div className="relative w-full overflow-hidden" style={{ aspectRatio: 671 / 1000 }}>

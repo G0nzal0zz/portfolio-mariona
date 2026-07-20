@@ -1,6 +1,5 @@
 'use client';
 
-import Image from 'next/image';
 import { useLanguage } from '@/lib/language-context';
 import { contactContent } from '@/data/contact-content';
 
@@ -42,13 +41,13 @@ export function ContactContent() {
 
       {/* Foto, tratamiento monocromo azul (ya viene aplicado en el archivo) — recorte centrado en la cara */}
       <div className="relative mt-12 aspect-[10/9] w-[280px] overflow-hidden md:w-[340px]">
-        <Image
+        {/* eslint-disable-next-line @next/next/no-img-element */}
+        <img
           src="images/contact/mariona.jpg"
           alt="Mariona Larroya"
-          fill
           sizes="340px"
           style={{ objectPosition: '75% 20%' }}
-          className="object-cover"
+          className="absolute inset-0 h-full w-full object-cover"
         />
       </div>
     </main>
