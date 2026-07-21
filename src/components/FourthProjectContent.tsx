@@ -35,7 +35,7 @@ export function FourthProjectContent() {
         </div>
 
         <div className="mt-6 flex flex-wrap gap-x-2 font-mono text-xs tracking-wide opacity-70">
-          G
+          <span>*002 //</span>
           <Link href="/work/kraux-font" data-cursor="view" className="hover:opacity-100 hover:underline underline-offset-4">
             {c.prev}
           </Link>
